@@ -1,0 +1,51 @@
+identity:
+  name: mdtrans
+  author: lfenghx
+  label:
+    en_US: mdtrans
+    zh_Hans: mdtrans
+    pt_BR: mdtrans
+description:
+  human:
+    en_US: md file text translate
+    zh_Hans: md file text translate
+    pt_BR: md file text translate
+  llm: md file text translate
+parameters:
+  - name: mdfile
+    type: file
+    required: true
+    label:
+      en_US: md file
+      zh_Hans: md 文件
+    human_description:
+      en_US: Please upload the md file
+      zh_Hans: 请上传md文件
+    llm_description: md file text translate
+    form: llm
+  - name: query
+    type: string
+    required: false
+    label:
+      en_US: translate requirements
+      zh_Hans: 翻译要求
+    human_description:
+      en_US: Please fill in your translation requirements
+      zh_Hans: 请填写你的翻译要求
+    llm_description: md file text translate
+    form: llm
+  - name: trans_model
+    type: model-selector
+    scope: llm
+    required: true
+    label:
+      en_US: translate model
+      zh_Hans: 翻译模型
+    human_description:
+      en_US: Please select the translation model
+      zh_Hans: 请选择翻译模型
+    llm_description: md file text translate
+    form: form
+extra:
+  python:
+    source: tools/mdtrans.py

@@ -1,0 +1,17 @@
+identity:
+  author: lfenghx
+  name: mdtrans
+  label:
+    en_US: mdtrans
+    zh_Hans: mdtrans
+    pt_BR: mdtrans
+  description:
+    en_US: md file text translate
+    zh_Hans: md file text translate
+    pt_BR: md file text translate
+  icon: icon.svg
+tools:
+  - tools/mdtrans.yaml
+extra:
+  python:
+    source: provider/mdtrans.py
